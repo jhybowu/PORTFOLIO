@@ -9,34 +9,44 @@ export function ContactSection() {
       <div className="space-y-6">
         <div className="flex flex-col gap-3">
           <a
-            href="mailto:stavinfernandes2098@gmail.com"
+            href="mailto:gjibowu@gmail.com"
             className="flex items-center text-sm hover:text-primary transition-colors"
           >
             <Mail className="h-4 w-4 mr-2 text-primary" />
-            stavinfernandes2098@gmail.com
+            gjibowu@gmail.com
           </a>
-          
+
+          <a
+            href="tel:+2349030470649"
+            className="flex items-center text-sm hover:text-primary transition-colors"
+          >
+            <Phone className="h-4 w-4 mr-2 text-primary" />
+            +234 903 047 0649
+          </a>
+
           <div className="flex items-center text-sm">
             <MapPin className="h-4 w-4 mr-2 text-primary" />
-            Mumbai,India
+            Lagos, Nigeria
           </div>
+
           <a
-            href="https://www.linkedin.com/in/stavin-fernandes-296916249/"
+            href="https://www.linkedin.com/in/gbenga-jibowu-ab8804144"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center text-sm hover:text-primary transition-colors"
           >
             <Linkedin className="h-4 w-4 mr-2 text-primary" />
-            linkedin.com/in/stavin-fernandes-296916249/
+            linkedin.com/in/gbenga-jibowu-ab8804144
           </a>
+
           <a
-            href="https://github.com/Stavin13"
+            href="https://github.com/Jhybowu"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center text-sm hover:text-primary transition-colors"
           >
             <Github className="h-4 w-4 mr-2 text-primary" />
-            github.com/stavinfernandes
+            github.com/Jhybowu
           </a>
         </div>
       </div>

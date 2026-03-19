@@ -7,215 +7,155 @@ export function ProjectsSection() {
 
       <div className="space-y-6">
         <div className="p-3 border border-primary/20 rounded bg-primary/5">
-          <h3 className="text-primary font-bold">Automated Threat Intelligence Dashboard</h3>
+          <h3 className="text-primary font-bold">SOC Monitoring Lab (Wazuh + ELK)</h3>
           <pre className="text-xs my-2 text-muted-foreground">
             {`
   +-------------+     +----------------+     +----------------+ 
-  | Threat Data |---->| Data Processing|---->| Real-Time Alerts|
-  | Feeds       |     | & Analysis     |     | & Monitoring    |
+  | Log Sources |---->| Log Collection |---->| Real-Time Alerts|
+  | (Endpoints) |     | & Processing   |     | & Monitoring    |
   +-------------+     +----------------+     +----------------+ 
         |                    |                      |
         |                    v                      |
         |             +--------------+              |
-        +------------>| Dashboard    |<-------------+
-                      | Display      |
+        +------------>| SIEM System  |<-------------+
+                      | (Wazuh + ELK)|
                       +--------------+
                              |
                              v
                       +---------------+
-                      | Actionable    |
-                      | Insights      |
+                      | Threat        |
+                      | Detection     |
                       +---------------+
 `}
-
           </pre>
           <p className="text-sm mb-2">
-            A real-time dashboard for monitoring cybersecurity threats and providing alerts to help businesses identify and mitigate potential risks.
+            Deployed and configured a Security Operations Center (SOC) environment using Wazuh SIEM and Elastic Stack for real-time log analysis and threat detection.
           </p>
           <p className="text-xs text-muted-foreground mb-2">
-            Technologies: Python, Dash/Streamlit, Docker, Threat Intelligence APIs
+            Technologies: Wazuh, Elastic Stack (ELK), SIEM, Linux
           </p>
         </div>
 
         <div className="p-3 border border-primary/20 rounded bg-primary/5">
-          <h3 className="text-primary font-bold">Personal SIEM System</h3>
+          <h3 className="text-primary font-bold">Network Traffic Analysis Lab</h3>
           <pre className="text-xs my-2 text-muted-foreground">
             {`
   +-------------+     +----------------+     +----------------+
-  | Data Logs   |---->| Log Aggregation|---->| Real-Time Alerts|
-  | Collection  |     | & Storage      |     | & Incident      |
-  +-------------+     +----------------+     | Response       |
+  | Network     |---->| Packet Capture |---->| Traffic         |
+  | Traffic     |     | (Wireshark)    |     | Analysis        |
+  +-------------+     +----------------+     +----------------+
         |                    |                      |
         |                    v                      |
         |             +--------------+              |
-        +------------>| Dashboard    |<-------------+
-                      | Visualization|
+        +------------>| Investigation |<-------------+
+                      | & Detection   |
+                      +--------------+
+                             |
+                             v
+                      +---------------+
+                      | Threat        |
+                      | Identification|
+                      +---------------+
+`}
+          </pre>
+          <p className="text-sm mb-2">
+            Captured and analyzed network traffic using Wireshark to detect suspicious activity, investigate anomalies, and identify potential security threats.
+          </p>
+          <p className="text-xs text-muted-foreground mb-2">
+            Technologies: Wireshark, Networking, Packet Analysis
+          </p>
+        </div>
+
+        <div className="p-3 border border-primary/20 rounded bg-primary/5">
+          <h3 className="text-primary font-bold">Cloud Security Labs (AWS & GCP)</h3>
+          <pre className="text-xs my-2 text-muted-foreground">
+            {`
+  +-------------+     +----------------+     +----------------+ 
+  | Cloud       |---->| Logging &      |---->| Monitoring &    |
+  | Resources   |     | Access Control |     | Alerts          |
+  +-------------+     +----------------+     +----------------+ 
+        |                    |                      |
+        |                    v                      |
+        |             +--------------+              |
+        +------------>| Cloud SIEM   |<-------------+
+                      | Integration  |
                       +--------------+
                              |
                              v
                       +---------------+
                       | Security      |
-                      | Event Analysis|
+                      | Insights      |
                       +---------------+
 `}
-
           </pre>
           <p className="text-sm mb-2">
-            A Security Information and Event Management (SIEM) system for monitoring, detecting, and responding to security incidents in real time.
+            Worked with AWS and Google Cloud Platform focusing on logging, monitoring, and identity access management to improve cloud security posture.
           </p>
           <p className="text-xs text-muted-foreground mb-2">
-            Technologies: Python, ELK Stack, Docker
+            Technologies: AWS, Google Cloud Platform, Cloud Logging, IAM
           </p>
         </div>
 
         <div className="p-3 border border-primary/20 rounded bg-primary/5">
-          <h3 className="text-primary font-bold">EchoTrace - Real-time Deepfake Voice Detector</h3>
-          <pre className="text-xs my-2 text-muted-foreground">
-            {`
-  +-------------+     +------------------+     +----------------+ 
-  | Audio Input |---->| Deepfake Detection|---->| Real-Time Alert|
-  | Stream      |     | Algorithm        |     | & Reporting    |
-  +-------------+     +------------------+     +----------------+ 
-        |                    |                       |
-        |                    v                       |
-        |             +--------------+               |
-        +------------>| Detection API |<--------------+
-                      | & Processing  |
-                      +--------------+
-                             |
-                             v
-                      +---------------+
-                      | Audio Threat  |
-                      | Report        |
-                      +---------------+
-`}
-
-          </pre>
-          <p className="text-sm mb-2">
-            A real-time deepfake voice detection tool that analyzes live audio streams to detect manipulated voices.
-          </p>
-          <p className="text-xs text-muted-foreground mb-2">
-            Technologies: FastAPI, React, PyAnnote, Whisper, Together.ai
-          </p>
-        </div>
-
-        <div className="p-3 border border-primary/20 rounded bg-primary/5">
-          <h3 className="text-primary font-bold">Tweet Analysis Project</h3>
+          <h3 className="text-primary font-bold">Secure Network Simulation (Packet Tracer)</h3>
           <pre className="text-xs my-2 text-muted-foreground">
             {`
   +-------------+     +----------------+     +----------------+ 
-  | Twitter API |---->| Data Collection|---->| Sentiment &    |
-  | Integration |     | & Preprocessing |     | Trend Analysis |
+  | Network     |---->| Configuration  |---->| Routing &       |
+  | Design      |     | & Simulation   |     | Switching       |
   +-------------+     +----------------+     +----------------+ 
         |                    |                      |
         |                    v                      |
         |             +--------------+              |
-        +------------>| NLP Analysis  |<-------------+
-                      | & Visualization|
+        +------------>| Testing      |<-------------+
+                      | & Validation |
                       +--------------+
                              |
                              v
                       +---------------+
-                      | Insightful    |
-                      | Reports       |
+                      | Secure        |
+                      | Network Setup |
                       +---------------+
 `}
-
           </pre>
           <p className="text-sm mb-2">
-            A Tweet analysis tool using the Twitter API for sentiment analysis and trend tracking to identify key insights from user-generated content.
+            Designed and simulated secure network topologies using Cisco Packet Tracer to understand routing, switching, and network security configurations.
           </p>
           <p className="text-xs text-muted-foreground mb-2">
-            Technologies: Python, Twitter API, NLP, Pandas, Matplotlib, Docker
+            Technologies: Cisco Packet Tracer, Networking Fundamentals
           </p>
         </div>
-      </div>
-      <div className="p-3 border border-primary/20 rounded bg-primary/5">
-          <h3 className="text-primary font-bold">SnipSync: Copy Anyhwere Paste Anwyhere</h3>
-          <pre className="text-xs my-2 text-muted-foreground">
-            {`
-  +------------------+      +-------------------+      +-------------------------+
- | SnipSync Server  |----->| Clipboard         |----->| Data Accumulation &     |
- | Initialization   |      | Monitoring        |      | Encoding (Compress, AES)|
- +------------------+      +-------------------+      +-------------------------+
-          |                         |                          |
-          |                         v                          |
-          |                +-------------------+               |
-          +--------------->| Decision & Routing|<--------------+
-                           | (Broadcast/Peer)  |
-                           +-------------------+
-                                    |
-                                    v
-                           +-------------------+
-                           | Sync Evaluation & |
-                           | Verification/Logs |
-                           +-------------------+
-                                    |
-                                    v
-                           +-------------------+
-                           | Clipboard Update  |
-                           | on Devices        |
-                           +-------------------+
 
-`}
-
-          </pre>
-          <p className="text-sm mb-2">
-  A secure clipboard synchronization tool enabling real-time sharing of text, images, and files across devices over LAN with encryption and low latency.
-</p>
-<p className="text-xs text-muted-foreground mb-2">
-  Technologies: Python, Pyperclip, AES Encryption, WebSockets, SQLite, Docker, Raspberry Pi
-</p>
-        </div>
         <div className="p-3 border border-primary/20 rounded bg-primary/5">
-          <h3 className="text-primary font-bold">ThreatLens - AI-Powered Security Log Analysisc</h3>
-          <pre className="text-xs my-2 text-muted-foreground">
-            {`          +--------------------+
-          |   Security Logs    |
-          | (Syslog, Console,  |
-          |   Custom Formats)  |
-          +--------------------+
-                    |
-                    v
-          +--------------------+
-          |  Real-time Log     |
-          |   Processing       |
-          +--------------------+
-                    |
-                    v
-          +--------------------+
-          | AI-Powered Threat  |
-          |   Detection &      |
-          |   Categorization   |
-          +--------------------+
-                    |
-        +-----------+-----------+
-        |                       |
-        v                       v
-+--------------------+   +--------------------+
-| Historical Log     |   |  WebSocket API     |
-| Storage & Search   |   | (Real-time Alerts) |
-+--------------------+   +--------------------+
-        |                       |
-        +-----------+-----------+
-                    |
-                    v
-          +--------------------+
-          | React Web Dashboard|
-          |   Visualization    |
-          +--------------------+
-
-
+        <h3 className="text-primary font-bold">Android Baking Application</h3>
+        <pre className="text-xs my-2 text-muted-foreground">
+          {`
+  +-------------+     +----------------+     +----------------+ 
+  | User Input  |---->| App Logic      |---->| UI Display      |
+  | Interface   |     | Processing     |     | & Interaction   |
+  +-------------+     +----------------+     +----------------+ 
+        |                    |                      |
+        |                    v                      |
+        |             +--------------+              |
+        +------------>| Debugging    |<-------------+
+                      | & Testing    |
+                      +--------------+
+                             |
+                             v
+                      +---------------+
+                      | Functional    |
+                      | Mobile App    |
+                      +---------------+
 `}
-
-          </pre>
-          <p className="text-sm mb-2">
-  An AI-powered security log analysis platform that delivers real-time threat detection, intelligent categorization, and interactive visualization of security events.
-</p>
-<p className="text-xs text-muted-foreground mb-2">
-  Technologies: Python, Machine Learning, macOS Console, Syslog, WebSockets, React, Docker
-</p>
+        </pre>
+        <p className="text-sm mb-2">
+          Developed a mobile application using Java and XML, focusing on user interface design, debugging, and functionality.
+        </p>
+        <p className="text-xs text-muted-foreground mb-2">
+          Technologies: Java, XML, Android Studio
+        </p>
         </div>
+      </div>
     </div>
   )
 }

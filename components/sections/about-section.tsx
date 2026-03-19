@@ -10,64 +10,66 @@ export function AboutSection() {
         <div className="md:w-2/5">
           <AsciiPortraitComparison />
           <div className="text-center text-xs text-muted-foreground mt-2">
-            Stavin Fernandes
+            Saheed Jibowu
             <br />
-            <span className="text-primary/60">Cybersecurity Professional</span>
+            <span className="text-primary/60">Cybersecurity Intern | SOC Analyst</span>
           </div>
         </div>
 
         <div className="space-y-3 md:w-3/5">
           <p>
-            Hello! I'm Stavin Fernandes, a cybersecurity professional specializing in threat detection, incident
-            response, and security operations. With my experience in identifying and mitigating security threats, I
-            focus on protecting enterprise environments.
+            Hello! I'm Saheed Jibowu, a cybersecurity intern and aspiring SOC Analyst with hands-on experience in 
+            security monitoring, threat detection, and incident response. I focus on analyzing security events and 
+            protecting systems from evolving cyber threats.
           </p>
 
           <p>
-            I have a strong background in IAM (Identity and Access Management), focusing on enhancing user lifecycle
-            management and strengthening access control mechanisms, aligning them with business processes and objectives.
+            I have practical experience working with SIEM tools such as Wazuh and the Elastic Stack (ELK), as well as 
+            performing network traffic analysis using Wireshark. I am also familiar with cloud security fundamentals 
+            across AWS and Google Cloud Platform, including logging and access control.
           </p>
 
           <div className="mt-2 p-3 border border-primary/20 rounded bg-primary/5">
             <h3 className="text-primary font-bold mb-2">Personal Bio:</h3>
             <div className="space-y-2 text-sm">
               <p>
-                I thrive on challenges, always seeking ways to turn the impossible into the possible. This mindset
-                influences both my professional and personal life.
+                I am passionate about cybersecurity and continuously improving my skills in threat detection and 
+                defensive security. I enjoy working on real-world labs and simulations that strengthen my analytical 
+                thinking and problem-solving abilities.
               </p>
 
               <p>
-              ​Stavin Fernandes is an aspiring cybersecurity professional based in Mumbai, Maharashtra, India. 
-              He is currently a student at Wilson College, Chowpatty, Mumbai.
-               Stavin is passionate about protecting the digital world and is dedicated to learning and applying the latest security practices. 
-              His LinkedIn profile highlights his ambition to build a career in cybersecurity, reflecting his commitment to the field.
+                Currently based in Lagos, Nigeria, I am building my career in cybersecurity through hands-on projects, 
+                continuous learning, and practical experience in SOC environments.
               </p>
             </div>
           </div>
 
           <p>
-            I am dedicated to staying ahead of emerging cyber threats and implementing robust security measures to
-            safeguard critical infrastructure and data.
+            My goal is to become a highly skilled SOC Analyst, contributing to securing digital infrastructures and 
+            responding effectively to cyber incidents in real-world environments.
           </p>
 
           <div className="mt-2 p-3 border border-primary/20 rounded bg-primary/5">
             <h3 className="text-primary font-bold mb-2">Quick Facts:</h3>
             <ul className="space-y-1">
               <li>
-                <span className="text-muted-foreground">Location:</span> Mumbai, India
+                <span className="text-muted-foreground">Location:</span> Lagos, Nigeria
               </li>
               <li>
-                <span className="text-muted-foreground">Education:</span> BSc IT, Wilson College
+                <span className="text-muted-foreground">Education:</span> B.Tech in Metallurgical & Materials Engineering, FUTA
               </li>
               <li>
-                <span className="text-muted-foreground">Specialty:</span> combines cybersecurity expertise with AI, full-stack development, cloud technologies, and real-world applications in healthcare, making you a versatile and forward-thinking professional in the tech industry.
+                <span className="text-muted-foreground">Specialty:</span> Security monitoring, SIEM analysis, network traffic analysis, and cloud security fundamentals.
               </li>
               <li>
-                <span className="text-muted-foreground">Certifications:</span>
+                <span className="text-muted-foreground">Tools & Technologies:</span>
                 <ul className="list-disc pl-5">
-                  <li>Cybersecurity & Software Engineering Expert – Job Simulation Certifications (AIG, Goldman Sachs, Mastercard, Tata Group)</li>
-                  <li>Certified Network Security Practitioner (CNSP)</li>
-                  </ul>
+                  <li>Wazuh SIEM, Elastic Stack (ELK)</li>
+                  <li>Wireshark, Cisco Packet Tracer</li>
+                  <li>AWS & Google Cloud Platform</li>
+                  <li>Python (Basic), Java, XML</li>
+                </ul>
               </li>
             </ul>
           </div>

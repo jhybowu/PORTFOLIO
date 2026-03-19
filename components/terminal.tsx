@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { AboutSection } from "@/components/sections/about-section"
 import { EducationSection } from "@/components/sections/education-section"
 import { SkillsSection } from "@/components/sections/skills-section"
-//import { ExperienceSection } from "@/components/sections/experience-section"
+import { ExperienceSection } from "@/components/sections/experience-section"
 import { ProjectsSection } from "@/components/sections/projects-section"
 import { CertificationsSection } from "@/components/sections/certifications-section"
 import { ContactSection } from "@/components/sections/contact-section"
@@ -52,7 +52,7 @@ export default function Terminal() {
           <div className="space-y-2">
             <ImageAsciiLogo />
             <p className="font-mono text-white">
-              Welcome to Stavin Fernandes' cybersecurity portfolio! Type help to see available commands.
+              Welcome to Saheed Jibowu's cybersecurity portfolio! Type help to see available commands.
             </p>
           </div>
         ),
@@ -69,15 +69,9 @@ export default function Terminal() {
     scrollToBottom()
   }, [commandHistory, currentSection, scrollToBottom])
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-
-    if (!input.trim()) return
-
-    const command = input.trim().toLowerCase()
+  const processCommand = useCallback((command: string) => {
     let output: React.ReactNode
 
-    // Process command
     switch (command) {
       case "help":
         output = (
@@ -85,7 +79,7 @@ export default function Terminal() {
             <p className="font-bold">Available commands:</p>
             <ul className="space-y-1">
               <li>
-                <span className="text-white font-bold">about</span> - Learn about Stavin
+                <span className="text-white font-bold">about</span> - Learn about Saheed
               </li>
               <li>
                 <span className="text-white font-bold">education</span> - View educational background
@@ -136,7 +130,7 @@ export default function Terminal() {
         break
 
       case "experience":
-        output = <p className="text-white">Experience section is currently unavailable.</p>
+        output = <ExperienceSection />
         setCurrentSection("experience")
         break
 
@@ -173,7 +167,6 @@ export default function Terminal() {
 [+] Inspecting file integrity...
 [+] Scanning for malware signatures...
 [+] Checking for suspicious processes...
-[+] Checking for suspicious processes...
 `}
             </pre>
             <p className="text-green-500">Scan complete! No threats detected. System secure.</p>
@@ -192,7 +185,6 @@ export default function Terminal() {
         setCurrentSection(null)
     }
 
-    // Add command to history
     setCommandHistory((prev) => [
       ...prev,
       {
@@ -202,9 +194,16 @@ export default function Terminal() {
       },
     ])
 
-    // Reset input and history index
     setInput("")
     setHistoryIndex(-1)
+  }, [])
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+
+    if (!input.trim()) return
+
+    processCommand(input.trim().toLowerCase())
   }
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -234,7 +233,7 @@ export default function Terminal() {
       <div className="bg-black border border-white/30 rounded-t-md p-2 flex items-center">
         <TerminalIcon className="h-4 w-4 text-white mr-2" />
         <span className="text-sm font-mono text-white">
-          stavin@cybersec ~ {currentSection ? `/${currentSection}` : ""}
+          Jibowu@cybersec ~ {currentSection ? `/${currentSection}` : ""}
         </span>
       </div>
 
@@ -271,10 +270,7 @@ export default function Terminal() {
         <Button
           variant="outline"
           size="sm"
-          onClick={() => {
-            setInput("about")
-            handleSubmit({ preventDefault: () => {} } as React.FormEvent)
-          }}
+          onClick={() => processCommand("about")}
           className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30"
         >
           <User className="h-3 w-3 mr-1" />
@@ -283,10 +279,7 @@ export default function Terminal() {
         <Button
           variant="outline"
           size="sm"
-          onClick={() => {
-            setInput("education")
-            handleSubmit({ preventDefault: () => {} } as React.FormEvent)
-          }}
+          onClick={() => processCommand("education")}
           className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30"
         >
           <GraduationCap className="h-3 w-3 mr-1" />
@@ -295,10 +288,7 @@ export default function Terminal() {
         <Button
           variant="outline"
           size="sm"
-          onClick={() => {
-            setInput("skills")
-            handleSubmit({ preventDefault: () => {} } as React.FormEvent)
-          }}
+          onClick={() => processCommand("skills")}
           className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30"
         >
           <Shield className="h-3 w-3 mr-1" />
@@ -307,10 +297,7 @@ export default function Terminal() {
         <Button
           variant="outline"
           size="sm"
-          onClick={() => {
-            setInput("experience")
-            handleSubmit({ preventDefault: () => {} } as React.FormEvent)
-          }}
+          onClick={() => processCommand("experience")}
           className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30"
         >
           <Briefcase className="h-3 w-3 mr-1" />
@@ -319,10 +306,7 @@ export default function Terminal() {
         <Button
           variant="outline"
           size="sm"
-          onClick={() => {
-            setInput("projects")
-            handleSubmit({ preventDefault: () => {} } as React.FormEvent)
-          }}
+          onClick={() => processCommand("projects")}
           className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30"
         >
           <Code className="h-3 w-3 mr-1" />
@@ -331,10 +315,7 @@ export default function Terminal() {
         <Button
           variant="outline"
           size="sm"
-          onClick={() => {
-            setInput("certifications")
-            handleSubmit({ preventDefault: () => {} } as React.FormEvent)
-          }}
+          onClick={() => processCommand("certifications")}
           className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30"
         >
           <Award className="h-3 w-3 mr-1" />
@@ -343,10 +324,7 @@ export default function Terminal() {
         <Button
           variant="outline"
           size="sm"
-          onClick={() => {
-            setInput("contact")
-            handleSubmit({ preventDefault: () => {} } as React.FormEvent)
-          }}
+          onClick={() => processCommand("contact")}
           className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30"
         >
           <Mail className="h-3 w-3 mr-1" />

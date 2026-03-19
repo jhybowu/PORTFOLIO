@@ -4,7 +4,6 @@ import { Inter, JetBrains_Mono } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" })
 const jetbrainsMono = JetBrains_Mono({
@@ -14,17 +13,17 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Stavin Fernandes| Cybersecurity Professional",
-  description: "Cybersecurity portfolio of Stavin Fernandes- SOC Analyst, Security Engineer, and Threat Expert",
+  title: "Saheed Jibowu| Cybersecurity Professional",
+  description: "Cybersecurity portfolio of Saheed Jibowu- SOC Analyst",
   generator: "v0.dev",
   keywords: ["Cybersecurity", "SOC Analyst", "Security Engineer", "Threat Expert", "Portfolio"],
-  authors: [{ name: "Stavin Fernandes" }],
-  creator: "Stavin Fernandes",
+  authors: [{ name: "Saheed Jibowu" }],
+  creator: "Saheed Jibowu",
   robots: "index, follow",
   openGraph: {
     type: "website",
-    title: "Stavin Fernandes| Cybersecurity Professional",
-    description: "Cybersecurity portfolio of Stavin Fernandes- SOC Analyst, Security Engineer, and Threat Expert"
+    title: "Saheed Jibowu| Cybersecurity Professional",
+    description: "Cybersecurity portfolio of Saheed Jibowu- SOC Analyst"
   }
 }
 
@@ -51,7 +50,6 @@ export default function RootLayout({
         >
           {children}
           <Analytics />
-          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>

@@ -1,5 +1,5 @@
 import { AsciiArt } from "@/components/ascii-art"
-import { Award, Trophy, Flag } from "lucide-react"
+import { Award } from "lucide-react"
 
 export function CertificationsSection() {
   return (
