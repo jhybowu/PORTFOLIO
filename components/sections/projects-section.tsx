@@ -127,6 +127,33 @@ export function ProjectsSection() {
         </div>
 
         <div className="p-3 border border-primary/20 rounded bg-primary/5">
+          <h3 className="text-primary font-bold">Secure WAN Network Simulation (Ghana & Cape Verde)</h3>
+          <pre className="text-xs my-2 text-muted-foreground">
+            {`
+  +-------------+     +------------+     +-------------+
+  | Ghana LAN   |     |  WAN Link  |     | Cape Verde  |
+  | 10.10.1.0/25|<--->|(Crossover) |<--->| 10.20.1.0/25|
+  +-------------+     +------------+     +-------------+
+        |                                       |
+   +----------+                           +----------+
+   | Router   |                           | Router   |
+   | Switch   |                           | Switch   |
+   | 4 PCs    |                           | 4 PCs    |
+   | 1 Server |                           | 1 Server |
+   +----------+                           +----------+
+        |_______________ ACL __________________|
+              HTTP (port 80) & ICMP only
+`}
+          </pre>
+          <p className="text-sm mb-2">
+            Designed and simulated a secure WAN connection between two branch offices (Ghana and Cape Verde) using Cisco Packet Tracer. Configured routers, switches, IP addressing with CIDR, and ACLs to restrict network access to HTTP and ICMP traffic only.
+          </p>
+          <p className="text-xs text-muted-foreground mb-2">
+            Technologies: Cisco Packet Tracer, Routing, ACLs, CIDR, WAN, Network Security
+          </p>
+        </div>
+
+        <div className="p-3 border border-primary/20 rounded bg-primary/5">
         <h3 className="text-primary font-bold">Android Baking Application</h3>
         <pre className="text-xs my-2 text-muted-foreground">
           {`
