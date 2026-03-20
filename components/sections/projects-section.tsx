@@ -163,6 +163,50 @@ export function ProjectsSection() {
         </div>
 
         <div className="p-3 border border-primary/20 rounded bg-primary/5">
+          <h3 className="text-primary font-bold">Secure System Architecture Design</h3>
+          <pre className="text-xs my-2 text-muted-foreground">
+            {`
+  +-----------------------------------------------+
+  |        DMZ Zone (Public Access Layer)          |
+  |  [Cloud WAF / Load Balancer] --> [Web Server]  |
+  |                               (HTTPS, TLS)     |
+  +-----------------------------------------------+
+                        |
+  +-----------------------------------------------+
+  |     Application Tier (Private Network)         |
+  |  [App Server / API Gateway]                    |
+  |  [IDS/IPS + Authentication (MFA, RBAC)]        |
+  +-----------------------------------------------+
+                        |
+  +-----------------------------------------------+
+  |     Database Tier (Restricted Access)          |
+  |  [Encrypted DB (At Rest)] [Backup & DR]        |
+  |                           (Cloud, Encrypted)   |
+  +-----------------------------------------------+
+                        |
+  +-----------------------------------------------+
+  |          Monitoring & Logging                  |
+  |   [SIEM / Log Collector (Anomaly Detection)]   |
+  +-----------------------------------------------+
+`}
+          </pre>
+          <div className="mt-2 space-y-1 text-xs">
+            <p className="font-semibold text-primary">Security Controls Implemented:</p>
+            <ul className="list-disc pl-4 space-y-1 text-muted-foreground">
+              <li>TLS Encryption in Transit (HTTPS on Web Server)</li>
+              <li>Encryption at Rest on Database and Backups</li>
+              <li>MFA &amp; RBAC Access Control at Application Tier</li>
+              <li>IDS/IPS Monitoring for threat detection</li>
+              <li>Offsite Encrypted Disaster Recovery Backups</li>
+              <li>WAF &amp; Load Balancer in DMZ for public-facing protection</li>
+            </ul>
+          </div>
+          <p className="text-xs text-muted-foreground mt-2">
+            Technologies: Draw.io, Network Architecture, DMZ, WAF, IDS/IPS, MFA, RBAC, SIEM, TLS, Cloud DR
+          </p>
+        </div>
+
+        <div className="p-3 border border-primary/20 rounded bg-primary/5">
         <h3 className="text-primary font-bold">Android Baking Application</h3>
         <pre className="text-xs my-2 text-muted-foreground">
           {`
