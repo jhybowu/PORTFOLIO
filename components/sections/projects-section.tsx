@@ -163,6 +163,40 @@ export function ProjectsSection() {
         </div>
 
         <div className="p-3 border border-primary/20 rounded bg-primary/5">
+          <h3 className="text-primary font-bold">Mini-PKI &amp; mTLS Lab (Kali VM)</h3>
+          <pre className="text-xs my-2 text-muted-foreground">
+            {`
+  +-------------------+       VMnet1 Host-Only        +-------------------+
+  |   Kali VM         |     192.168.254.0/24           |   Host PC         |
+  |  192.168.254.130  |<----------------------------->|  192.168.254.1    |
+  |                   |                               |                   |
+  |  [Root CA]        |   mTLS (TLS 1.3 / ECDHE)     | [openssl s_server]|
+  |  [Intermediate CA]|-------- port 9443 ----------->| [Server Cert+SAN] |
+  |  [Client Cert]    |                               |                   |
+  |  [SSH: Ed25519 /  |------- SSH key auth --------->|                   |
+  |   RSA-4096]       |                               |                   |
+  +-------------------+                               +-------------------+
+           |
+  [tcpdump capture: 164 packets → capture.pcap]
+  [John the Ripper: weak PEM passphrase cracked → mitigated]
+`}
+          </pre>
+          <div className="mt-2 space-y-1 text-xs">
+            <p className="font-semibold text-primary">Lab Phases:</p>
+            <ul className="list-disc pl-4 space-y-1 text-muted-foreground">
+              <li><span className="text-primary">PKI Design:</span> Root CA (RSA-4096, self-signed) → Intermediate CA (RSA-4096) → Server &amp; Client Certs (RSA-2048, SAN); SHA-256 hashing</li>
+              <li><span className="text-primary">mTLS Validation:</span> curl with client cert succeeded; curl without client cert rejected — TLS 1.3 / ECDHE_RSA_AES_256_GCM_SHA384 negotiated (forward secrecy confirmed)</li>
+              <li><span className="text-primary">SSH Hardening:</span> RSA-4096 and Ed25519 keypairs generated; Ed25519 installed on host; password auth &amp; root login disabled</li>
+              <li><span className="text-primary">Traffic Capture:</span> tcpdump recorded 164 packets (capture.pcap); decrypted via SSLKEYLOGFILE</li>
+              <li><span className="text-primary">Weakness &amp; Mitigation:</span> Weak PEM passphrase cracked with John the Ripper + rockyou wordlist; mitigated by re-encrypting with strong passphrase; recommended HSM / offline root CA</li>
+            </ul>
+          </div>
+          <p className="text-xs text-muted-foreground mt-2">
+            Technologies: OpenSSL, PKI, mTLS, TLS 1.3, SSH (Ed25519/RSA), tcpdump, Wireshark, John the Ripper, Kali Linux
+          </p>
+        </div>
+
+        <div className="p-3 border border-primary/20 rounded bg-primary/5">
           <h3 className="text-primary font-bold">Cloud SOC Lab – Elastic SIEM on AWS</h3>
           <pre className="text-xs my-2 text-muted-foreground">
             {`
