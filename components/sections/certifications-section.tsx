@@ -16,15 +16,29 @@ export function CertificationsSection() {
             <li className="flex items-start">
               <span className="text-primary mr-2">•</span>
               <div>
-                <p className="font-medium">Cybersecurity & Software Engineering Expert – Job Simulation Certifications</p>
-                <p className="text-xs text-muted-foreground">AIG, Goldman Sachs, Mastercard, Tata Group</p>
+                <p className="font-medium">Certified Network Security Practitioner (CNSP)</p>
+                <p className="text-xs text-muted-foreground">SecOps</p>
               </div>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">•</span>
               <div>
-                <p className="font-medium">Certified Network Security Practitioner (CNSP)</p>
-                <p className="text-xs text-muted-foreground">SecOps</p>
+                <p className="font-medium">Certified Cybersecurity Educator Professional (CCEP)</p>
+                <p className="text-xs text-muted-foreground">Red Team Leaders · Issued November 2025</p>
+              </div>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-2">•</span>
+              <div>
+                <p className="font-medium">Java Tutorial Course</p>
+                <p className="text-xs text-muted-foreground">SoloLearn · Issued June 2017 · Certificate #1068-2422196</p>
+              </div>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-2">•</span>
+              <div>
+                <p className="font-medium">Jobberman Soft-Skills Training</p>
+                <p className="text-xs text-muted-foreground">Jobberman Nigeria · Mastercard Foundation / Young Africa Works · October 2022</p>
               </div>
             </li>
           </ul>
