@@ -148,7 +148,16 @@ export function ProjectsSection() {
           <p className="text-sm mb-2">
             Designed and simulated a secure WAN connection between two branch offices (Ghana and Cape Verde) using Cisco Packet Tracer. Configured routers, switches, IP addressing with CIDR, and ACLs to restrict network access to HTTP and ICMP traffic only.
           </p>
-          <p className="text-xs text-muted-foreground mb-2">
+          <div className="mt-2 space-y-1 text-xs">
+            <p className="font-semibold text-primary">ACL Verification Results:</p>
+            <ul className="list-disc pl-4 space-y-1 text-muted-foreground">
+              <li><span className="text-green-500">ALLOWED</span> — ICMP (ping) between Ghana and Cape Verde LANs</li>
+              <li><span className="text-green-500">ALLOWED</span> — HTTP (port 80) access to web servers across WAN</li>
+              <li><span className="text-red-500">BLOCKED</span> — Telnet, FTP, and SSH to remote hosts (timed out)</li>
+              <li>ACL 102 match counts confirmed: ICMP (4), HTTP (21), established (6), denied (33)</li>
+            </ul>
+          </div>
+          <p className="text-xs text-muted-foreground mt-2">
             Technologies: Cisco Packet Tracer, Routing, ACLs, CIDR, WAN, Network Security
           </p>
         </div>
